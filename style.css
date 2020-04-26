@@ -1,0 +1,46 @@
+body{
+  margin: 0 0 0 0;
+}
+#topbar{
+  border: 3px solid blue;
+  display: flex;
+  max-height: 15vh;
+  justify-content:flex-start;
+  justify-content: space-between;
+}
+.logo img{
+  max-height: 15vh;
+}
+.weare, .artists, .commands {
+  border: 3px solid blue;
+  align-self: center;
+}
+.ritghspace{
+ width: 5%;
+}
+#presentation{
+  border: 3px solid pink;
+  min-height: 85vh;
+}
+.presentationtitle{
+  #border: 3px solid black;
+  display: block;
+  text-align: center;
+  margin-top: 5%;
+}
+.presentationtext{
+  #border: 3px solid green;
+  display: inline-block;
+  text-align: center;
+  margin-top: 5%;
+  font-size: 20px;
+  line-height: 2;
+}
+#contentartist{
+  border: 3px solid violet;
+  min-height: 100vh;
+}
+#contentcommands{
+  border: 3px solid black;
+  min-height: 100vh;
+}
