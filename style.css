@@ -1,12 +1,18 @@
 body{
   margin: 0 0 0 0;
 }
-#topbar{
-  border: 3px solid blue;
+#topspace{
+  #border: 3px solid blue;
   display: flex;
-  max-height: 15vh;
+  min-height: 10vh;
+}
+#topbar{
+  #border: 3px solid blue;
+  display: flex;
+  max-height: 10vh;
   justify-content:flex-start;
   justify-content: space-between;
+  background-color: #333;
 }
 .sticky {
   position: fixed;
@@ -14,28 +20,31 @@ body{
   width: 100%;
 }
 .logo img{
-  max-height: 15vh;
+  max-height: 10vh;
 }
 .weare, .artists, .commands {
-  border: 3px solid blue;
+  #border: 3px solid blue;
   align-self: center;
 }
 .ritghspace{
  width: 5%;
 }
-#presentation{
-  border: 3px solid pink;
-  min-height: 85vh;
-  margin-top: 15vh;
+#contentweare, #contentartist, #contentcommands{
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#contentweare{
+  #border: 3px solid pink;
+  min-height: 90vh;
   background-image: url('bienve.jpg');
 }
-.presentationtitle{
+.wearetitle{
   #border: 3px solid black;
   display: block;
   text-align: center;
   margin-top: 5%;
 }
-.presentationtext{
+.wearetext{
   #border: 3px solid green;
   display: inline-block;
   text-align: center;
@@ -44,12 +53,12 @@ body{
   line-height: 2;
 }
 #contentartist{
-  border: 3px solid violet;
-  min-height: 85vh;
-  margin-top: 15vh;
+  #border: 3px solid violet;
+  min-height: 100vh;
+  background-image: url('artistes.jpg');
 }
 #contentcommands{
-  border: 3px solid black;
-  min-height: 85vh;
-  margin-top: 15vh;
+  #border: 3px solid black;
+  min-height: 100vh;
+  background-image: url('food.jpg');
 }
