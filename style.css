@@ -8,6 +8,11 @@ body{
   justify-content:flex-start;
   justify-content: space-between;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 .logo img{
   max-height: 15vh;
 }
@@ -21,6 +26,8 @@ body{
 #presentation{
   border: 3px solid pink;
   min-height: 85vh;
+  margin-top: 15vh;
+  background-image: url('bienve.jpg');
 }
 .presentationtitle{
   #border: 3px solid black;
@@ -38,9 +45,11 @@ body{
 }
 #contentartist{
   border: 3px solid violet;
-  min-height: 100vh;
+  min-height: 85vh;
+  margin-top: 15vh;
 }
 #contentcommands{
   border: 3px solid black;
-  min-height: 100vh;
+  min-height: 85vh;
+  margin-top: 15vh;
 }
