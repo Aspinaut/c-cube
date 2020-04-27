@@ -1,5 +1,6 @@
 body{
   margin: 0 0 0 0;
+
 }
 #topspace{
   #border: 3px solid blue;
@@ -34,7 +35,8 @@ body{
 }
 #contentweare, #contentartist, #contentcommands{
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: center center;
 }
 #contentweare{
   #border: 3px solid pink;
