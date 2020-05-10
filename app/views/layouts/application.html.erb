@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CCube</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= favicon_link_tag asset_path('logo1.png') %>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header>
+    <div id="topbar" class="sticky">
+      <div class="logo">
+        <%= image_tag "logo1.png" %>
+      </div>
+      <div class="buttons">
+        <a href="/#content_weare" style="text-decoration: none" class="weare">
+          <div class="weare">
+            <p><%= t "nav.about_us"%><p>
+          </div>
+        </a>
+        <a href="/#content_artist" style="text-decoration: none" class="artists">
+          <div class="artists">
+            <p><%= t "nav.artists"%></p>
+          </div>
+        </a>
+        <a href="/#content_commands" style="text-decoration: none" class="commands">
+          <div class="commands">
+            <p><%= t "nav.orders"%></p>
+          </div>
+        </a>
+      </div>
+      <div class="right_buttons">
+        <div class="dropdown change_language">
+          <a class="btn btn-secondary dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= I18n.locale %>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <div class="dropdown-item">
+              <%= link_to_unless_current "fr", locale: :fr %>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-item">
+              <%= link_to_unless_current "en", locale: :en %>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-item">
+              <%= link_to_unless_current "nl", locale: :nl %>
+            </div>
+          </div>
+        </div>
+  <!-- si la session est créée on affiche sign out, sinon sign in / up-->
+        <div class="dropdown log_button">
+          <a class="btn btn-secondary" data-toggle="modal" data-target="#modal">Sign in</a>
+        </div>
+      </div>
+    </div>
+    <div class="modal-signin modal" id="modal" role="dialog" aria-labelledby="signinLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center" id="signinLabel">Connexion</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <form class="form-signin" action="traitement.php" method="post">
+              <label for="username">Email : </label>
+              <input type="text" name="username" value="" required="required">
+              <br/>
+              <label for="password">Mot de passe : </label>
+              <input type="password" name="password" value="" required="required">
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn text-center btn-" id="sendSignin">Valider</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <%= yield %>
+  </body>
+  <footer>
+  
+  </footer>
+</html>

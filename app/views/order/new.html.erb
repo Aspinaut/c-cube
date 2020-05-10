@@ -1,0 +1,101 @@
+<body>
+  <div class="order_form">
+    <form action="#script-vincent" method="post" >
+
+        <fieldset>
+            <legend>Menu</legend>
+
+            <label for="date" >Date du menu : </label>
+            <input id="date" type="date" />
+
+            <!-- Sélection repas -->
+
+            <input id="midi" name="repas" type="radio" value="midi" />
+            <label for="midi" >Midi</label>
+
+            <input id="soir" name="repas" type="radio" value="soir" />
+            <label for="soir" >Soir</label>
+
+            <p>Régime alimentaire :</p>
+
+            <input id="omni" name="regime" type="radio" value="omni" />
+            <label for="omni" >Omnivore</label>
+
+            <input id="vege" name="regime" type="radio" value="vege" />
+            <label for="vege" >Végétarien</label>
+
+            <input id="vegan" name="regime" type="radio" value="vegan" />
+            <label for="vegan" >Végane</label><br/>
+
+            <p>Allergies :</p>
+
+            <input id="arachides" name="allergies" type="checkbox" value="arachides" />
+            <label for="arachides" >Arachides</label>
+
+            <input id="oeufs" name="allergies" type="checkbox" value="oeufs" />
+            <label for="oeufs" >Œufs</label>
+
+            <input id="gluten" name="allergies" type="checkbox" value="gluten" />
+            <label for="gluten" >Gluten</label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Livraison</legend>
+
+            <label for="heure_livraison" >Heure de livraison souhaitée : </label>
+            <input id="heure_livraison" name="heure_livraison" type="time" />
+
+            <p>J'ai un contenant : </p>
+
+            <label for="contenant" >Oui</label>
+            <input id="contenant" name="is_contenant" type="radio" value="oui" />
+
+            <label for="pas_contenant" >Non</label>
+            <input id="pas_contenant" name="is_contenant" type="radio" value="non" checked />
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Adresse</legend>
+
+            <label for="voie" >Voie : </label>
+            <input id="voie" name="rue" type="text" /><br/>
+
+            <label for="numero" >Numéro : </label>
+            <input id="numero" max="999" min="1" name="numero" size="3" type="number" />
+
+            <label for="boite" >Boite : </label>
+            <input id="boite" maxlength ="3" name="boite" size="3" type="text" /><br/>
+
+            <label for="cp" >Code postal : </label>
+            <input id="cp" maxlength="4" name="cp" size="4" type="text" /><br/>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Coordonnées</legend>
+
+            <label for="email" >E-mail : </label>
+            <input id="email" type="email" />
+
+            <label for="telephone" >Téléphone : </label>
+            <input id="telephone" type="tel" >
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Paiement</legend>
+
+            <label for="especes" >Espèces</label>
+            <input id="especes" name="paiement" type="radio" value="especes" />
+
+            <label for="online" >En ligne</label>
+            <input id="online" name="paiement" type="radio" value="online" />
+
+        </fieldset>
+
+    </form>
+  </div>
+</body>
+</html>
