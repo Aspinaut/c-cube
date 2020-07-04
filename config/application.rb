@@ -16,6 +16,6 @@ module CCube
     # the framework and any gems in your application.
 
     config.i18n.available_locales = [:fr, :nl, :en]
-    #config.i18n.default_locale = { locale: request.env["HTTP_ACCEPT_LANGUAGE"][0..1]}
+    #config.i18n.locale = :fr
   end
 end

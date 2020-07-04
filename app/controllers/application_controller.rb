@@ -1,21 +1,18 @@
 class ApplicationController < ActionController::Base
-
   before_action :set_locale
+  private
 
   def set_locale
-    I18n.locale = params[:locale] if params[:locale].present?
-
-    #if (request.env["HTTP_ACCEPT_LANGUAGE"])[0..1].include?("fr")
-    #  params[:locale] = "fr"
-    #elsif (request.env["HTTP_ACCEPT_LANGUAGE"])[0..1].include?("nl")
-    #  params[:locale] = "nl"
-    #else
-    #  params[:locale] = "en"
-    #end
+    if params[:locale] == nil
+      I18n.locale = http_accept_language.compatible_language_from(I18n.available_locales)
+    else
+      I18n.locale = params[:locale]
+    end
   end
 
 
   def default_url_options(options = {})
     { locale: I18n.locale }
   end
+
 end

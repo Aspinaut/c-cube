@@ -64,8 +64,12 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # translation
 gem 'rails-i18n', '~> 5.1'
 
+gem 'http_accept_language'
+
 gem 'devise'
 
 gem 'stripe'
 
 gem 'dotenv-rails'
+
+gem 'geocoder'
